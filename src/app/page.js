@@ -48,7 +48,7 @@ export default function Home() {
 
 
 <div className="flex flex-col-reverse md:flex-row w-full">
-  <div className="w-full h-64 md:w-1/3 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/watermelon.png)' }}>
+  <div className="w-full h-64 md:w-1/3 md:h-screen h-[50vh] bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/watermelon.png)' }}>
     <div className="absolute inset-0 bg-black opacity-50"></div>
   </div>
 
@@ -80,10 +80,11 @@ export default function Home() {
     </button>
   </div>
 
-  <div className="w-full md:w-1/3 h-64 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/apiexample.png)' }}>
+  <div className="w-full md:w-1/3 h-[50vh] md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/apiexample.png)' }}>
     <div className="absolute inset-0 bg-black opacity-25"></div>
   </div>
 </div>
+
 
 
 
