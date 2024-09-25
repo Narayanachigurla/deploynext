@@ -48,13 +48,13 @@ export default function Home() {
 
 
 <div className="flex flex-col-reverse md:flex-row w-full">
-  <div className="w-full md:w-1/3 h-1/2 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/\images/\watermelon.png)' }}>
+  <div className="w-full h-64 md:w-1/3 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/watermelon.png)' }}>
     <div className="absolute inset-0 bg-black opacity-50"></div>
   </div>
 
   <div className="w-full md:w-2/3 p-8 flex items-center justify-center flex-col">
     <h1 className="text-6xl p-6 text-center">What functions does it provide?</h1>
-    <p className="text-1xl text-center">
+    <p className="text-xl text-center">
       With Fruityvice you can receive interesting data from any fruit of your choosing. On top of that, you can add fruits by yourself as well! Added fruits will first have to be approved by an admin to avoid any errors in the data. The shown data is based on 100 grams of the listed fruit. The owner does not guarantee the available data is 100% flawless; however, he will do his best to fix any wrong data.
     </p>
     <button className="border border-black text-black bg-white m-6" style={{ padding: '10px 20px', borderRadius: '20px' }}>
@@ -62,6 +62,7 @@ export default function Home() {
     </button>
   </div>
 </div>
+
 
 
 
@@ -79,10 +80,11 @@ export default function Home() {
     </button>
   </div>
 
-  <div className="w-full md:w-1/3 h-1/2 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/\images/\apiexample.png)' }}>
-    <div className="absolute inset-0"></div>
+  <div className="w-full md:w-1/3 h-64 md:h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/apiexample.png)' }}>
+    <div className="absolute inset-0 bg-black opacity-25"></div>
   </div>
 </div>
+
 
 
       <div className="flex flex-col items-center justify-center h-screen p-8 bg-gray-100">
