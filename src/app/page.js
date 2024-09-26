@@ -88,39 +88,38 @@ export default function Home() {
 
 
 
-      <div className="flex flex-col items-center justify-center h-screen p-8 bg-gray-100">
-        {/* API Input Section */}
-        <div className="w-full max-w-md mb-4">
-          <h2 className="text-2xl mb-4 text-center">API Endpoint</h2>
-          
-          <input
-            type="text"
-            value={endpoint}
-            onChange={(e) => setEndpoint(e.target.value)}
-            placeholder="Enter API path (e.g., fruit/all or fruit/banana)"
-            className="border border-gray-300 rounded-lg p-2 w-full mb-4"
-          />
+<div className="flex flex-col items-center justify-center h-screen p-8 bg-gray-100">
+  {/* API Input Section */}
+  <div className="w-full max-w-md mb-4">
+    <h2 className="text-2xl mb-4 text-center">API Endpoint</h2>
+    
+    <input
+      type="text"
+      value={endpoint}
+      onChange={(e) => setEndpoint(e.target.value)}
+      onKeyPress={(e) => {
+        if (e.key === 'Enter') {
+          handleFetch();
+        }
+      }}
+      placeholder="Enter API path (e.g., fruit/all or fruit/banana)"
+      className="border border-gray-300 rounded-lg p-2 w-full mb-4"
+    />
 
-          <button 
-            onClick={handleFetch} 
-            className="bg-blue-500 text-white rounded-lg py-2 px-4 w-full"
-          >
-            Get Response
-          </button>
+    {error && <p className="text-red-500 mt-2 text-center">{error}</p>} {/* Error message */}
+  </div>
 
-          {error && <p className="text-red-500 mt-2 text-center">{error}</p>} {/* Error message */}
-        </div>
+  {/* API Response Box */}
+  <div className="w-full max-w-md">
+    <h2 className="text-2xl mb-4 text-center">API Response</h2>
+    <div className="border border-gray-300 rounded-lg p-4 h-64 bg-white overflow-auto">
+      <pre className="whitespace-pre-wrap border border-gray-300 rounded-lg p-2 bg-gray-50 text-gray-800">
+        {response || "API response will appear here..."}
+      </pre>
+    </div>
+  </div>
+</div>
 
-        {/* API Response Box */}
-        <div className="w-full max-w-md">
-          <h2 className="text-2xl mb-4 text-center">API Response</h2>
-          <div className="border border-gray-300 rounded-lg p-4 h-64 bg-white overflow-auto">
-            <pre className="whitespace-pre-wrap border border-gray-300 rounded-lg p-2 bg-gray-50 text-gray-800">
-              {response || "API response will appear here..."}
-            </pre>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
